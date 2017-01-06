@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="viewPager_mainActivity" type="id"/>
+    <item name="tabLayout_mainActivity" type="id"/>
+    <item name="ck_list" type="id"/>
+    <item name="ck_choose" type="id"/>
+    <item name="ck_personal" type="id"/>
+    <item name="viewPager" type="id"/>
+</resources>
