@@ -13,49 +13,16 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"/>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#ff898989"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="5dp">
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center">
-                <android.support.design.widget.TabItem
-                    android:id="@id/ck_list"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/tabbar_btn_list"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center">
 
-                <android.support.design.widget.TabItem
-                    android:id="@id/ck_choose"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/tabbar_btn_choose"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center">
-                <android.support.design.widget.TabItem
-                    android:id="@id/ck_personal"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/tabbar_btn_personage"/>
-            </LinearLayout>
-        </LinearLayout>
+    <android.support.design.widget.TabLayout
+        android:id="@id/MainTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.design.widget.TabLayout>
 
 </LinearLayout>

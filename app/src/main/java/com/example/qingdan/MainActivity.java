@@ -1,6 +1,6 @@
 package com.example.qingdan;
 
-import android.support.design.widget.TabItem;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.view.View;
@@ -20,10 +20,8 @@ import java.util.List;
  */
 public class MainActivity extends BaseActivity {
     private ViewPager mViewPager;
-    private int[] mIDs;
-
-    private TabItem[] mTabItem;
     private MainFragemntAdapter mAdapetr;
+    private TabLayout mTabLayout;
     @Override
     public int getContentViewId() {
         return R.layout.activity_main;
@@ -37,16 +35,13 @@ public class MainActivity extends BaseActivity {
     @Override
     public void initView() {
         mViewPager=findViewByIdNoCast(R.id.viewPager);
-        mIDs=new int[]{R.id.ck_list,R.id.ck_choose,R.id.ck_personal};
-        mTabItem=new TabItem[mIDs.length];
-
-        for (int i = 0; i <mIDs.length ; i++) {
-            mTabItem[i]= (TabItem) findViewById(mIDs[i]);
-            mTabItem[i].setOnClickListener(this);
-        }
-
+        mTabLayout=findViewByIdNoCast(R.id.MainTabLayout);
         mAdapetr=new MainFragemntAdapter(getFragment(),getSupportFragmentManager());
         mViewPager.setAdapter(mAdapetr);
+        mTabLayout.setupWithViewPager(mViewPager);
+        mTabLayout.getTabAt(0).setIcon(R.drawable.tabbar_btn_list);
+        mTabLayout.getTabAt(1).setIcon(R.drawable.tabbar_btn_choose);
+        mTabLayout.getTabAt(2).setIcon(R.drawable.tabbar_btn_personage);
 
     }
 
